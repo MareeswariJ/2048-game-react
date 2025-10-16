@@ -172,9 +172,7 @@ function App() {
         <p>
           Built with React & Functional Programming Principles
         </p>
-        <p className="footer-hint">
-          Use ← ↑ → ↓ arrow keys or WASD to play
-        </p>
+        
       </footer>
     </div>
   );

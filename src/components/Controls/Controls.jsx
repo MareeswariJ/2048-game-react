@@ -81,7 +81,7 @@ const Controls = ({ onRestart, onMove, onNewGame, gameOver, gameWon }) => {
       </div>
 
       <div className="instructions">
-        <p>Use arrow keys or buttons to play</p>
+        <p className="keys">Use arrow keys or buttons to play</p>
         <p className="keys-hint">← ↑ → ↓ or WASD</p>
       </div>
     </div>
