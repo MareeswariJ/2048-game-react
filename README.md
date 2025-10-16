@@ -1,6 +1,6 @@
 # 2048 Game Implementation
 
-A functional implementation of the popular 2048 game built with React and Vite, featuring a clean GUI and smooth gameplay.
+A modern, fully-functional implementation of the classic 2048 puzzle game built with React and Vite, following functional programming principles with an attractive dark gradient UI.
 
 ## 🎮 Game Overview
 
@@ -21,8 +21,6 @@ Combine tiles with the same number to reach 2048! Slide tiles in four directions
 ### Prerequisites
 - npm
 
-### Setup
-```bash
 # Clone the repository
 git clone <your-repo-url>
 cd 2048-game
@@ -48,14 +46,17 @@ npm run build
 ## 🏗️ Project Structure
 ```
 src/
+|
 ├── components/        # React components
 │   ├── Board/        # Game board component
-│   ├── Tile/         # Individual tile component
+│   ├── Controls/     # Game controls
 │   ├── ScoreBoard/   # Score display
-│   └── Controls/     # Game controls
-├── utils/            # Game logic & helpers
+│   └── Tile/         # Individual tile component
+├── utils/ 
+    └── constants.js  # Game configuration      
 │   ├── gameLogic.js  # Core game mechanics
 │   └── helpers.js    # Utility functions
+    
 └── App.jsx           # Main application component
 ```
 
@@ -65,22 +66,23 @@ src/
 - Pure functions for game logic
 - Immutable state updates
 - No side effects in core logic functions
+- Function composition - complex logic from simple functions
+- Declarative code - focus on "what" not "how"
+
 
 ### Key Algorithms
-- **Tile Movement**: Matrix traversal with merging logic
-- **Random Tile Generation**: Weighted random selection (90% chance for 2, 10% for 4)
-- **Win/Lose Detection**: Board state analysis
+- Slide & Merge: O(n) time, processes each row
+- Move Detection: O(n²) scans grid for valid moves
+- Win/Lose Check: O(n²) board state analysis
 
 ### Data Structures
-- 2D Array for board representation
-- Object for tile tracking with unique IDs
+- 2D Array for grid representation
+- O(1) cell access, O(n²) space complexity IDs
 
 ## 🛠️ Technologies Used
 
-- **React** - UI framework
-- **Vite** - Build tool and dev server
-- **JavaScript (ES6+)** - Core language
-- **CSS3** - Styling and animations
+Tech Stack: React 18.3.1 • Vite 7.1.10 • Node.js 22.11.0
+Status: ✅ Production Ready
 
 ## 📦 Deployment
 

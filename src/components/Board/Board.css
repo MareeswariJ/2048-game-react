@@ -1,0 +1,50 @@
+/* src/components/Board/Board.css */
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  background-color: #bbada0;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1; /* Keeps it square */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* IMPORTANT: Remove display: flex from board-row */
+.board-row {
+  display: contents; /* This makes tiles direct children of .board grid */
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .board {
+    max-width: 400px;
+    gap: 8px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .board {
+    max-width: 320px;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .board-container {
+    padding: 0.5rem;
+  }
+}
