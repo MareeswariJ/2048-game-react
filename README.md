@@ -84,9 +84,9 @@ src/
 Tech Stack: React 18.3.1 • Vite 7.1.10 • Node.js 22.11.0
 Status: ✅ Production Ready
 
-## 📦 Deployment
+## 📦 Live Demo
 
-[Deployment link will be added here]
+https://2048-game-react.vercel.app/
 
 ## 🧪 Future Enhancements
 
